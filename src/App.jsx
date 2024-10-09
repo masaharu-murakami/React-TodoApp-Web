@@ -1,11 +1,25 @@
-
+import Task from "./component/Task";
+import { Box, Center, CheckboxGroup, Text } from '@chakra-ui/react';
 import './App.css';
 
-function App() {
+function App(){
     return (
-        <div>
-            <h1>こんにちは</h1>
-        </div>
+        <Box mt="64px">
+          <Center>
+            <Box>
+              <Box mb="24px">
+                <Text fontsize="24px" fontWeight="bold">
+                  タスク一覧
+                </Text>
+              </Box>
+              <CheckboxGroup>
+                <Task name="買い物" />
+                <Task name="ランニング" />
+                <Task name="プログラミングの学習" />
+              </CheckboxGroup>
+            </Box>
+          </Center>
+        </Box>
     );
 }
 
